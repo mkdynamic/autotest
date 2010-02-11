@@ -1,3 +1,5 @@
+**NB.** This is a fork of the original project, with the Rails plugin included.
+
 As soon as you save a file, autotest will run the matching tests.
 
 This is a fork of the ZenTest package to extract autotest from it.

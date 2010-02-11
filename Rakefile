@@ -26,7 +26,6 @@ task :update do
     f.puts
     Dir.chdir "lib" do
       Dir["autotest/*.rb"].sort.each do |s|
-        next if s =~ /rails|discover/
         f.puts "# require '#{s[0..-4]}'"
       end
     end
@@ -51,11 +50,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "autotest"
-    gem.summary = "Autotest, without ZenTest"
-    gem.homepage = "http://github.com/grosser/autotest"
-    gem.authors = ["Ryan Davis"]
+    gem.summary = "Autotest, without ZenTest (Fork of http://github.com/grosser/autotest with Rails plugin)"
+    gem.homepage = "http://github.com/mkdynamic/autotest"
+    gem.authors = ["Mark Dodwell"]
+    gem.files += Dir['lib/**/*.rb']
   end
-
+  
   Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler, or one of its dependencies, is not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"

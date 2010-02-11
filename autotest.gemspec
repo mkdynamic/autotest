@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.version = "4.2.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Ryan Davis"]
-  s.date = %q{2010-01-31}
-  s.executables = ["unit_diff", "autotest"]
+  s.authors = ["Mark Dodwell"]
+  s.date = %q{2010-02-04}
+  s.executables = ["autotest", "unit_diff"]
   s.extra_rdoc_files = [
     "README.markdown"
   ]
@@ -28,7 +28,10 @@ Gem::Specification.new do |s|
      "example_dot_autotest.rb",
      "lib/autotest.rb",
      "lib/autotest/autoupdate.rb",
+     "lib/autotest/fixtures.rb",
+     "lib/autotest/migrate.rb",
      "lib/autotest/once.rb",
+     "lib/autotest/rails.rb",
      "lib/autotest/rcov.rb",
      "lib/autotest/restart.rb",
      "lib/autotest/timestamp.rb",
@@ -38,15 +41,15 @@ Gem::Specification.new do |s|
      "test/test_autotest_integration.rb",
      "test/test_unit_diff.rb"
   ]
-  s.homepage = %q{http://github.com/grosser/autotest}
+  s.homepage = %q{http://github.com/mkdynamic/autotest}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
-  s.summary = %q{Autotest, without ZenTest}
+  s.summary = %q{Autotest, without ZenTest (Fork of http://github.com/grosser/autotest with Rails plugin)}
   s.test_files = [
-    "test/test_autotest.rb",
+    "test/helper.rb",
+     "test/test_autotest.rb",
      "test/test_autotest_integration.rb",
-     "test/helper.rb",
      "test/test_unit_diff.rb"
   ]
 
